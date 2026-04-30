@@ -1,78 +1,212 @@
-
-
-
+// codeforces Round 1096
+// A
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-void solve(){
-    int n;
-    cin>>n;
-    vector<int>m(n);
-    for(int i=0;i<n;i++){
-        cin>>m[i];
-    }
-    vector<int>a = m;
-    sort(m.begin(), m.end());
-    if(m == a){
-        cout<<0<<endl;
+void solve()
+{
+    int x, y;
+    cin >> x >> y;
+
+    if (x % 2 != 0 && y % 2 != 0)
+    {
+        cout << "NO" << endl;
         return;
     }
-    unordered_map<int,int>mp;
-    for(int i=0;i<n;i++){
-        mp[a[i]] = i;
+    else
+    {
+        cout << "YES" << endl;
+        return;
     }
-    int mini = INT_MAX;
-    for(int i=0;i<n;i++){
-        if(abs(i - mp[]))
-    }
-
 }
 
-int main(){
+int main()
+{
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
     int t;
     cin >> t;
-    while(t--){
+    while (t--)
+    {
+        solve();
+    }
+}
+// B
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+void solve()
+{
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+
+    int leftB =0 , rightB = 0;
+    for(int i = 0;i <n; i++){
+        if(s[i] == '('){
+            leftB++;
+        }
+        if(s[i] == ')'){
+            rightB++;
+        }
+    }
+    if(leftB != rightB){
+        cout<<"NO"<<endl;
+        return ;
+    }
+    else{
+        cout<<"YES"<<endl;
+        return;
+    }
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t;
+    cin >> t;
+    while (t--)
+    {
         solve();
     }
 }
 
+// C
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+void solve()
+{
+    int n;
+    cin >> n;
+    vector<int> m(n);
+    for (int i = 0; i < n; i++){
+        cin >> m[i];
+    }
+    vector<int>two, three, six, other;
+    for (int i = 0; i < n; i++){
+        if(m[i] % 6 == 0){
+            six.push_back(m[i]);
+        }
+        else if(m[i] % 3 == 0){
+            three.push_back(m[i]);
+        }
+        else if(m[i] % 2 == 0){
+            two.push_back(m[i]);
+        }
+        else{
+            other.push_back(m[i]);
+        }
+    }
+    for(int x : two)cout << x << " ";
+    for(int x : other)cout << x << " ";
+    for(int x : three)cout << x << " ";
+    for(int x : six)cout << x << " ";
+    cout<<endl;
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+    }
+}
+
+// codeforces Practice
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+void solve()
+{
+    int n;
+    cin >> n;
+    vector<int> m(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> m[i];
+    }
+    vector<int> a = m;
+    sort(m.begin(), m.end());
+    if (m == a)
+    {
+        cout << 0 << endl;
+        return;
+    }
+    unordered_map<int, int> mp;
+    for (int i = 0; i < n; i++)
+    {
+        mp[a[i]] = i;
+    }
+    int mini = INT_MAX;
+    for (int i = 0; i < n; i++)
+    {
+        if (abs(i - mp[]))
+    }
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+    }
+}
 
 #include <bits/stdc++.h>
 using namespace std;
 
 vector<long long> primes;
-void sieve(int limit){
-    vector<bool> isPrime(limit+1, true);
+void sieve(int limit)
+{
+    vector<bool> isPrime(limit + 1, true);
     isPrime[0] = isPrime[1] = false;
 
-    for(int i = 2; i <= limit; i++){
-        if(isPrime[i]){
+    for (int i = 2; i <= limit; i++)
+    {
+        if (isPrime[i])
+        {
             primes.push_back(i);
-            for(long long j = 1LL*i*i; j <= limit; j += i){
+            for (long long j = 1LL * i * i; j <= limit; j += i)
+            {
                 isPrime[j] = false;
             }
         }
     }
 }
 
-int main(){
+int main()
+{
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    sieve(200000); 
+    sieve(200000);
 
     int t;
     cin >> t;
 
-    while(t--){
+    while (t--)
+    {
         int n;
         cin >> n;
 
-        for(int i = 0; i < n; i++){
-            cout << primes[i] * primes[i+1] << " ";
+        for (int i = 0; i < n; i++)
+        {
+            cout << primes[i] * primes[i + 1] << " ";
         }
         cout << "\n";
     }
@@ -87,7 +221,7 @@ int main(){
 //         while(i<n-1){
 //            if(s[i]!=s[i+1]){
 //             count++;
-//            } 
+//            }
 //            i++;
 //         }
 //     }
@@ -100,20 +234,13 @@ int main(){
 //             }
 //            if(s[i]!=s[i+1]){
 //             count++;
-//            } 
+//            }
 //            i++;
 //         }
 //         if(maxi==2){
 //             count++;
 //         }
 //     }
-
-
-
-
-
-
-
 
 // #include <bits/stdc++.h>
 // using namespace std;
@@ -168,7 +295,7 @@ int main(){
 //     cin.tie(NULL);
 
 //     int t;
-//     cin >> t;   
+//     cin >> t;
 
 //     while (t--) {
 //         int n;
@@ -209,7 +336,7 @@ int main(){
 
 //             ans[i] = min(turns, A[i]);
 
-//             if(turns < A[i]){ 
+//             if(turns < A[i]){
 //                 // friend gets a turn
 //                 turns++;
 //             }
@@ -230,18 +357,18 @@ int main(){
 //     {
 //         long long a, b, c;
 //         cin >> a >> b >> c;
-        
-//         if (c % 2 == 1) 
+
+//         if (c % 2 == 1)
 //         {
-           
+
 //             if (b > a)
-//                 cout << "Second" << endl; 
+//                 cout << "Second" << endl;
 //             else
-//                 cout << "First" << endl; 
+//                 cout << "First" << endl;
 //         }
-//         else 
+//         else
 //         {
-            
+
 //             if (a > b)
 //                 cout << "First" << endl;
 //             else
@@ -348,7 +475,6 @@ int main(){
 //     cin >> t;
 //     while(t--) solve();
 // }
-
 
 // sort(nums1.begin(), nums1.end());
 
