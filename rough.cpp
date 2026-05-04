@@ -76,33 +76,39 @@
 // }
 #include <bits/stdc++.h>
 using namespace std;
-vector<int>canAllPackagesBeDelivered(vector<int>truckCap,vector<int>weights){
-    int n1=truckCap.size();
-    int n2=weights.size(); 
-    sort(weights.begin(),weights.end());
-    if(truckCap[n1-1]<weights[n2-1]){
+vector<int> canAllPackagesBeDelivered(vector<int> truckCap, vector<int> weights)
+{
+    int n1 = truckCap.size();
+    int n2 = weights.size();
+    sort(weights.begin(), weights.end());
+    if (truckCap[n1 - 1] < weights[n2 - 1])
+    {
         return {0};
     }
-    int j=n2-1;
-    multiset<int>ms;
-    for(int i=0;i<n1;i++){
+    int j = n2 - 1;
+    multiset<int> ms;
+    for (int i = 0; i < n1; i++)
+    {
         ms.insert(truckCap[i]);
     }
     int k;
-    while(j>=0){
-        int maxi=*ms.rbegin();
-        if(maxi>=weights[j]){
+    while (j >= 0)
+    {
+        int maxi = *ms.rbegin();
+        if (maxi >= weights[j])
+        {
             j--;
-            k=maxi/2;
+            k = maxi / 2;
             ms.erase(ms.find(maxi));
             ms.insert(k);
         }
-
     }
-    if(j<0){
+    if (j < 0)
+    {
         return {1};
     }
-    else{
+    else
+    {
         return {0};
     }
 }
@@ -110,76 +116,87 @@ vector<int>canAllPackagesBeDelivered(vector<int>truckCap,vector<int>weights){
 #include <bits/stdc++.h>
 using namespace std;
 
-void s() {
+void s()
+{
     int n, k;
     cin >> n >> k;
     vector<int> a(n);
     map<int, int> m;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cin >> a[i];
         m[a[i]]++;
     }
     vector<int> v;
-    for (auto p : m) {
-        if (p.first != a[0]) {
+    for (auto p : m)
+    {
+        if (p.first != a[0])
+        {
             v.push_back(p.second);
         }
     }
     sort(v.begin(), v.end());
     int r = 0;
-    for (int x : v) {
-        if (k >= x) {
+    for (int x : v)
+    {
+        if (k >= x)
+        {
             k -= x;
             r++;
-        } else {
+        }
+        else
+        {
             break;
         }
     }
     cout << m.size() - r << "\n";
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int t;
     cin >> t;
-    while (t--) {
+    while (t--)
+    {
         s();
     }
     return 0;
 }
 
-
-
-    long countBoughtItems(long m,vector<int>cost){
-        int count=0;
-        int i=0;
-        int n=cost.size();
-        int k=1;
-        while(m>=0){
-            if(m>=k*cost[i]){
-                count++;
-                m-=k*cost[i];
-                i++;
-            }
-            else{
-                break;
-            }
-            if(i>n-1){
-                i=0;
-                k++;
-            }
+long countBoughtItems(long m, vector<int> cost)
+{
+    int count = 0;
+    int i = 0;
+    int n = cost.size();
+    int k = 1;
+    while (m >= 0)
+    {
+        if (m >= k * cost[i])
+        {
+            count++;
+            m -= k * cost[i];
+            i++;
         }
-        return count;
+        else
+        {
+            break;
+        }
+        if (i > n - 1)
+        {
+            i = 0;
+            k++;
+        }
     }
+    return count;
+}
 
-
-
-    // #include <bits/stdc++.h>
+// #include <bits/stdc++.h>
 // using namespace std;
 
 // void s() {
-    
+
 // }
 
 // int main() {
@@ -193,66 +210,48 @@ int main() {
 //     return 0;
 // }
 
-
-
-using ll=long long;
-    bool canComplete(vector<int>& time, int totalTrips,ll k){
-        unordered_map<int,int>mp;
-        for(auto &num:time){
-            mp[num]++;
-        }
-        vector<int>v;
-        for(auto &i:mp){
-            v.push_back(i.first);
-        }
-        sort(v.begin(),v.end());
-        ll trips=0;
-        for(int i=0;i<v.size();i++){
-            trips+=(k/v[i])*mp[v[i]];
-        }
-        return trips>=totalTrips;
+using ll = long long;
+bool canComplete(vector<int> &time, int totalTrips, ll k)
+{
+    unordered_map<int, int> mp;
+    for (auto &num : time)
+    {
+        mp[num]++;
     }
-    long long minimumTime(vector<int>& time, int totalTrips) {
-        if(time.size()==1){
-             return totalTrips*time[0];
-        }
-        ll l=1;
-        ll r=1e9;
-        ll ans=0;
-        while(l<r){
-            ll mid=l+((r-l)/2);
-            if(canComplete(time, totalTrips, mid)){
-                ans=mid;
-                r=mid-1;
-            }
-            else{
-                l=mid+1;
-            }
-        }
-        return ans;
+    vector<int> v;
+    for (auto &i : mp)
+    {
+        v.push_back(i.first);
     }
-
-
-
-// (x+6,y);
-// (x+3,y);
-// (x+2,y+1);
-
-// (x+4,y-1);
-
-
-
-// (0,0) -> (x,y);
-
-
-// (0,0) ->  (14,1)           true
-
-// (2,1)
-
-// (12,0)
-// if(p%6==0 || p%3==0){
-// return true;  simply
-// }
-
-
- 
+    sort(v.begin(), v.end());
+    ll trips = 0;
+    for (int i = 0; i < v.size(); i++)
+    {
+        trips += (k / v[i]) * mp[v[i]];
+    }
+    return trips >= totalTrips;
+}
+long long minimumTime(vector<int> &time, int totalTrips)
+{
+    if (time.size() == 1)
+    {
+        return totalTrips * time[0];
+    }
+    ll l = 1;
+    ll r = 1e9;
+    ll ans = 0;
+    while (l < r)
+    {
+        ll mid = l + ((r - l) / 2);
+        if (canComplete(time, totalTrips, mid))
+        {
+            ans = mid;
+            r = mid - 1;
+        }
+        else
+        {
+            l = mid + 1;
+        }
+    }
+    return ans;
+}
