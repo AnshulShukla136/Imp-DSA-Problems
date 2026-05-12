@@ -25,10 +25,11 @@ public:
         int r = 1e9;
         int ans = -1;
 
-        sort(task.begin(), task.end(), [](auto &a, auto &b)
-             {
-                 return (a[1] - a[0]) > (b[1] - b[0]);
-             });
+        sort(task.begin(), task.end(), [](auto &a, auto &b) { // most important part we will sort on the basis of difference maximum
+                                                              // difference first
+            return (a[1] - a[0]) > (b[1] - b[0]);
+
+        });
 
         while (l <= r)
         {
