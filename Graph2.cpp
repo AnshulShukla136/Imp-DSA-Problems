@@ -136,11 +136,7 @@ vector<int> shortestPathInDAG(int n, int m, vector<vector<int>> &edges){
     }
 
     int src=0;          //source node which is 0 for this question
-    vector<int>dis(n);
-
-    for(int i=0;i<n;i++){
-        dis[i]=INT_MAX;
-    }
+    vector<int>dis(n, INT_MAX);
 
     dis[src]=0;         //to reach 0 we need 0 distance
     
@@ -253,7 +249,7 @@ void unionSet(int u,int v,vector<int>& parent,vector<int>& rankv){
     }
     else{
         parent[v] = u;
-        rankv[u]++;
+            rankv[u]++;
     }
 }
 
