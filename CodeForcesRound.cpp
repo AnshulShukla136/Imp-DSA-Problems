@@ -1,36 +1,38 @@
 // codeforces Round 1096
 // A
-#include <bits/stdc++.h>
-using namespace std;
-typedef long long ll;
-void solve()
-{
-    int x, y;
-    cin >> x >> y;
+#include <iostream>
+#include <cmath>
+#include <algorithm>
 
-    if (x % 2 != 0 && y % 2 != 0)
-    {
-        cout << "NO" << endl;
-        return;
-    }
-    else
-    {
-        cout << "YES" << endl;
-        return;
+using namespace std;
+
+void solve() {
+    long long n, x1, x2, k;
+    cin >> n >> x1 >> x2 >> k;
+
+    long long d = abs(x1 - x2);
+    d = min(d, n - d);
+
+    // Edge case: If the circle only has 2 positions, Reimu catches Remilia immediately 
+    // in 1 step regardless of how many moves Remilia has.
+    if (n == 2) {
+        cout << 1 << "\n";
+    } else {
+        cout << d + k << "\n";
     }
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(nullptr);
 
     int t;
     cin >> t;
-    while (t--)
-    {
+    while (t--) {
         solve();
     }
+
+    return 0;
 }
 // B
 #include <bits/stdc++.h>
@@ -38,35 +40,44 @@ using namespace std;
 typedef long long ll;
 void solve()
 {
-    int n;
-    cin >> n;
-    string s;
-    cin >> s;
+    int x;
+    cin>>x;
+    vector<int>a(x);
+    for(int i = 0;i < x;i++){
+        cin>>a[i];
+    }
+    int zero = 0;
+    int two = 0;
+    int one = 0;
+    for(int i =0;i<x;i++){
+        if(a[i] == 0){
+            zero++;
+        }
+        if(a[i] == 1){
+            one++;
+        }
+        if(a[i] == 2){
+            two++;
+        }
+    }
+    int ans = 0;
+    ans += zero;
+    
+    int mini = min(one, two);
+    ans += mini;
+    one -= mini;
+    two -= mini;
 
-    int leftB =0 , rightB = 0;
-    for(int i = 0;i <n; i++){
-        if(s[i] == '('){
-            leftB++;
-        }
-        if(s[i] == ')'){
-            rightB++;
-        }
-    }
-    if(leftB != rightB){
-        cout<<"NO"<<endl;
-        return ;
-    }
-    else{
-        cout<<"YES"<<endl;
-        return;
-    }
+    ans += one/3;
+    ans += two/3;
+    cout<<ans<<endl;
 }
-
+ 
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
-
+ 
     int t;
     cin >> t;
     while (t--)
