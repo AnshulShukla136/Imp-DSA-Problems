@@ -1,3 +1,7 @@
+// this is bdf problem
+// TC = O(n)
+// SC = O(n)S
+
 class Solution
 {
 public:
