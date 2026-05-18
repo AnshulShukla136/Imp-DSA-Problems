@@ -13,8 +13,6 @@ void solve() {
     long long d = abs(x1 - x2);
     d = min(d, n - d);
 
-    // Edge case: If the circle only has 2 positions, Reimu catches Remilia immediately 
-    // in 1 step regardless of how many moves Remilia has.
     if (n == 2) {
         cout << 1 << "\n";
     } else {
