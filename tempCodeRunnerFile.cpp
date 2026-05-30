@@ -1,29 +1,57 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-void solve()
-{
-    int n,x1,x2,k;
-    cin>>n>>x1>>x2>>k;
 
-    int dis = abs(x1-x2);
+void solve() {
+    int n, x, s;
+    cin >> n >> x >> s;
 
-    dis = min(dis, n-dis);
+    string st;
+    cin >> st;
 
-    cout<<dis+k<<endl;
-    
-    
+    long long eia = 0;  
+    int empty = x;
+    int ans = 0;
+
+    for (char c : st) {
+        if (c == 'I') {
+            if (empty > 0) {
+                empty--;
+                eia += (s - 1);
+                ans++;
+            }
+        }
+        else if (c == 'E') {
+            if (eia > 0) {
+                eia--;
+                ans++;
+            }
+        }
+        else { 
+            if (eia > 0) {
+                eia--;
+                ans++;
+            }
+            else if (empty > 0) {
+                empty--;
+                eia += (s - 1);
+                ans++;
+            }
+        }
+    }
+
+    cout << ans << '\n';
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(nullptr);
 
     int t;
     cin >> t;
-    while (t--)
-    {
+
+    while (t--) {
         solve();
     }
+
+    return 0;
 }

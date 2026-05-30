@@ -38,37 +38,7 @@ using namespace std;
 typedef long long ll;
 void solve()
 {
-    int x;
-    cin>>x;
-    vector<int>a(x);
-    for(int i = 0;i < x;i++){
-        cin>>a[i];
-    }
-    int zero = 0;
-    int two = 0;
-    int one = 0;
-    for(int i =0;i<x;i++){
-        if(a[i] == 0){
-            zero++;
-        }
-        if(a[i] == 1){
-            one++;
-        }
-        if(a[i] == 2){
-            two++;
-        }
-    }
-    int ans = 0;
-    ans += zero;
-    
-    int mini = min(one, two);
-    ans += mini;
-    one -= mini;
-    two -= mini;
-
-    ans += one/3;
-    ans += two/3;
-    cout<<ans<<endl;
+   
 }
  
 int main()

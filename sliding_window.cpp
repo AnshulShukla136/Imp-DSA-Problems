@@ -7,7 +7,7 @@
 
  2962. good question.
 
- (l)*(l+1)/2 -> total possible substring in length l or j-i+1;
+ (l)*(l+1)/2 -> total possible substring in length l = j-i+1;
  j-i+1 -> total subtring ending at j
 
 
