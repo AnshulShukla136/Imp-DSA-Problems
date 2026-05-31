@@ -7,17 +7,21 @@
 using namespace std;
 
 void solve() {
-    long long n, x1, x2, k;
-    cin >> n >> x1 >> x2 >> k;
+    int n;
+        cin >> n;
 
-    long long d = abs(x1 - x2);
-    d = min(d, n - d);
+        long long pref = 0;
+        long long best = (long long)4e18;
 
-    if (n == 2) {
-        cout << 1 << "\n";
-    } else {
-        cout << d + k << "\n";
-    }
+        for (int i = 1; i <= n; i++) {
+            long long x;
+            cin >> x;
+
+            pref += x;
+            best = min(best, pref / i);
+
+            cout << best << (i == n ? '\n' : ' ');
+        }
 }
 
 int main() {
@@ -38,7 +42,31 @@ using namespace std;
 typedef long long ll;
 void solve()
 {
-   
+   int n;
+        cin >> n;
+
+        vector<long long> a(n);
+        for (auto &x : a) cin >> x;
+
+        sort(a.begin(), a.end());
+
+        int ans = n;
+        int i = 0;
+
+        while (i < n) {
+            int j = i;
+
+            while (j < n && a[j] == a[i]) j++;
+
+            int less = i;
+            int greater = n - j;
+
+            ans = min(ans, max(less, greater));
+
+            i = j;
+        }
+
+        cout << ans << '\n';
 }
  
 int main()
@@ -57,50 +85,61 @@ int main()
 // C
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-void solve()
-{
-    int n;
-    cin >> n;
-    vector<int> m(n);
-    for (int i = 0; i < n; i++){
-        cin >> m[i];
+
+void solve() {
+    int n, x, s;
+    cin >> n >> x >> s;
+
+    string st;
+    cin >> st;
+
+    long long eia = 0;  
+    int empty = x;
+    int ans = 0;
+
+    for (char c : st) {
+        if (c == 'I') {
+            if (empty > 0) {
+                empty--;
+                eia += (s - 1);
+                ans++;
+            }
+        }
+        else if (c == 'E') {
+            if (eia > 0) {
+                eia--;
+                ans++;
+            }
+        }
+        else { 
+            if (eia > 0) {
+                eia--;
+                ans++;
+            }
+            else if (empty > 0) {
+                empty--;
+                eia += (s - 1);
+                ans++;
+            }
+        }
     }
-    vector<int>two, three, six, other;
-    for (int i = 0; i < n; i++){
-        if(m[i] % 6 == 0){
-            six.push_back(m[i]);
-        }
-        else if(m[i] % 3 == 0){
-            three.push_back(m[i]);
-        }
-        else if(m[i] % 2 == 0){
-            two.push_back(m[i]);
-        }
-        else{
-            other.push_back(m[i]);
-        }
-    }
-    for(int x : two)cout << x << " ";
-    for(int x : other)cout << x << " ";
-    for(int x : three)cout << x << " ";
-    for(int x : six)cout << x << " ";
-    cout<<endl;
+
+    cout << ans << '\n';
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(nullptr);
 
     int t;
     cin >> t;
-    while (t--)
-    {
+
+    while (t--) {
         solve();
     }
-}
 
+    return 0;
+}
 // codeforces Practice
 #include <bits/stdc++.h>
 using namespace std;
