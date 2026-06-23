@@ -255,3 +255,54 @@ long long minimumTime(vector<int> &time, int totalTrips)
     }
     return ans;
 }
+
+
+
+bool isConflict(vector<vector<int>>&nums){
+    int n = nums.size();
+
+    int maxi = INT_MIN;
+    unordered_map<int, int>mp;
+    for(int i = 0; i < n; i++){
+        int first = nums[i][0];
+        int second = nums[i][1];
+        mp[first]++;
+        mp[second]++;
+    }
+    for(int i = 0; i < n; i++){
+        int first = nums[i][0];
+        int second = nums[i][1];
+        for(int j = first + 1; j <= second - 1; j++){
+            if(mp.find(j) != mp.end()){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+static const int M = 1e9 + 7;
+    int maxTotalValue(vector<int>& value, vector<int>& decay, int m) {
+        int n = valud.size();
+        priority_queue<pair<long long, int>>pq;
+
+        for(int i = 0; i < n ; i++){
+            pq.push({value[i] , i});
+        }
+
+        long long ans = 0;
+        vector<long long>cnt(n, 0);
+
+        while(m-- && !pq.empty()){
+            auto [gain, idx] = pq.top();
+            pq.pop();
+
+            if(gain <= 0)break;
+
+            ans = (ans + gain) % M;
+            cnt[idx]++;
+            long long nextgain = (long long)value[idx] - (long long)decay[idx] * cnt[idx];
+            pq.push({nextgain, idx});
+        }
+        return (int)ans;
+    }©leetcode
