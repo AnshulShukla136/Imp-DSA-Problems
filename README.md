@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 |  |
 | ------- |
+| [0844-backspace-string-compare](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0844-backspace-string-compare) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Dynamic Programming
 |  |
@@ -57,4 +58,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2685-count-the-number-of-complete-components](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/2685-count-the-number-of-complete-components) |
+## String
+|  |
+| ------- |
+| [0844-backspace-string-compare](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0844-backspace-string-compare) |
+## Stack
+|  |
+| ------- |
+| [0844-backspace-string-compare](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0844-backspace-string-compare) |
+## Simulation
+|  |
+| ------- |
+| [0844-backspace-string-compare](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0844-backspace-string-compare) |
 <!---LeetCode Topics End-->
