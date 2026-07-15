@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0084-largest-rectangle-in-histogram](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0084-largest-rectangle-in-histogram) |
 | [1331-rank-transform-of-an-array](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/1331-rank-transform-of-an-array) |
 | [3336-find-the-number-of-subsequences-with-equal-gcd](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/3336-find-the-number-of-subsequences-with-equal-gcd) |
 | [3532-path-existence-queries-in-a-graph-i](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/3532-path-existence-queries-in-a-graph-i) |
@@ -68,6 +69,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Stack
 |  |
 | ------- |
+| [0084-largest-rectangle-in-histogram](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0084-largest-rectangle-in-histogram) |
 | [0844-backspace-string-compare](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0844-backspace-string-compare) |
 ## Simulation
 |  |
@@ -95,4 +97,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0543-diameter-of-binary-tree](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0543-diameter-of-binary-tree) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0084-largest-rectangle-in-histogram](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0084-largest-rectangle-in-histogram) |
 <!---LeetCode Topics End-->
