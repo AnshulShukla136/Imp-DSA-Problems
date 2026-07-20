@@ -47,6 +47,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Greedy
 |  |
 | ------- |
+| [0316-remove-duplicate-letters](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0316-remove-duplicate-letters) |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/1081-smallest-subsequence-of-distinct-characters) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Bit Manipulation
@@ -71,12 +72,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0316-remove-duplicate-letters](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0316-remove-duplicate-letters) |
 | [0844-backspace-string-compare](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0844-backspace-string-compare) |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/1081-smallest-subsequence-of-distinct-characters) |
 ## Stack
 |  |
 | ------- |
 | [0084-largest-rectangle-in-histogram](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0084-largest-rectangle-in-histogram) |
+| [0316-remove-duplicate-letters](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0316-remove-duplicate-letters) |
 | [0844-backspace-string-compare](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0844-backspace-string-compare) |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/1081-smallest-subsequence-of-distinct-characters) |
 ## Simulation
@@ -117,6 +120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0084-largest-rectangle-in-histogram](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0084-largest-rectangle-in-histogram) |
+| [0316-remove-duplicate-letters](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0316-remove-duplicate-letters) |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/1081-smallest-subsequence-of-distinct-characters) |
 ## Sliding Window
 |  |
