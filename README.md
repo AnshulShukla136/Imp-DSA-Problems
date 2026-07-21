@@ -76,6 +76,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0316-remove-duplicate-letters](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0316-remove-duplicate-letters) |
 | [0844-backspace-string-compare](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/0844-backspace-string-compare) |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/1081-smallest-subsequence-of-distinct-characters) |
+| [3499-maximize-active-section-with-trade-i](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/3499-maximize-active-section-with-trade-i) |
 ## Stack
 |  |
 | ------- |
@@ -94,6 +95,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [1291-sequential-digits](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/1291-sequential-digits) |
 | [3411-maximum-subarray-with-equal-products](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/3411-maximum-subarray-with-equal-products) |
+| [3499-maximize-active-section-with-trade-i](https://github.com/AnshulShukla136/Imp-DSA-Problems/tree/master/3499-maximize-active-section-with-trade-i) |
 ## Math
 |  |
 | ------- |
